@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { repos } from '../repos';
 
 @Component({
   selector: 'app-github',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
+  repos = repos;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
 
+  
 }
