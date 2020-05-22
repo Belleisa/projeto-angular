@@ -8,13 +8,11 @@ interface Response {
   disclaimer: string;
   bpi: {
     USD: {
-      symbol: string;
       description: string;
       rate_float: number;
       rate: string;
     };
     BRL: {
-      symbol: string;
       description: string;
       rate_float: number;
       rate: string;
@@ -48,7 +46,7 @@ export class BitcoinComponent implements OnInit {
   }
 
   update() {
-    this.http.get('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
+    this.http.get<Response>('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
     .subscribe(data => {
       this.lastUpdate = new Date();
       this.currentPrice = data;
