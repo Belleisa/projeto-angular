@@ -1,1 +1,48 @@
 <h1>Github</h1>
+<div class="cont">
+<h3>Repositórios:</h3>
+<p>Para mais detalhes, clique em algum dos nomes da lista abaixo:</p>
+<div *ngFor="let repo of repos; index as index">
+    <span>{{index}}. </span>
+    <a [routerLink]="['/repos', index]">
+        <span>{{repo.name}}</span>
+    </a>
+</div>
+</div>
+<div class="profile-container">
+    <div class="profile-card">
+        <div>
+            <a href="https://github.com/diegoskyceu">
+                <img src="https://avatars0.githubusercontent.com/u/48594926?s=400&v=4" alt="">
+            </a>
+        </div>
+        <div>
+            <h4>Nome: Diego</h4>
+            <h4>Github: diegoskyceu</h4>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div>
+            <a href="https://github.com/Belleisa" alt="">
+                <img src="https://avatars0.githubusercontent.com/u/47032848?s=400&v=4" alt="">
+            </a>
+        </div>
+        <div>
+            <h4>Nome: Isabelle</h4>
+            <h4 href="https://github.com/Belleisa">Github: Belleisa</h4>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div>
+            <a href="https://github.com/HenriquePercincula">
+                <img src="https://avatars2.githubusercontent.com/u/36556383?s=400&v=4" alt="">
+            </a>
+        </div>
+        <div>
+            <h4>Nome: Vitor Henrique</h4>
+            <h4 href="https://github.com/HenriquePercincula">Github: HenriquePercincula</h4>
+        </div>
+    </div>
+</div>
