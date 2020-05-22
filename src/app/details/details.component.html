@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <a [routerLink]="['/github']"> Voltar</a>
+    <h1>Detalhes do Repositório</h1>
+    <table>
+        <tr>
+            <th>Índice</th>
+            <td>{{index}}</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>{{repo.name}}</td>
+        </tr>
+        <tr>
+            <th>Nome Completo</th>
+            <td>{{repo.full_name}}</td>
+        </tr>
+        <tr>
+            <th>Criado por:</th>
+            <td>{{repo.creator}}</td>
+        </tr>
+        <tr>
+            <th>Criado em:</th>
+            <td>{{repo.created_at}}</td>
+        </tr>
+    </table>
+</div>
